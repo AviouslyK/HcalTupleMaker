@@ -36,6 +36,11 @@ cmsRun pfg_Local_RAW_cfg.py
 # global runs  
 cmsRun pfg_Global_RAW_cfg.py
 ```
+## To Create Ntuples and Generate Plots
+Overall Process for using crab and condor to generate Ntuples:
+1. Run crab_submit (it’s connected with pfg_QIE11_Global_RAW_noSkim_cfg_crab.py and both are in the /test directory) to generate and then store the Ntuples in the UMD cluster
+2. Got to the umd cluster and run submit jobs (which runs MakePlots.sh which runs makeChargePlots_replace_NLS.py multiple times) outputting the root files in a folder specified in makeChargePlots_replace_NLS.py.
+3. Use hadd.py to merge into one root file, then use beautifier to clean up.
 
 ## Local runs
 
