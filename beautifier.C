@@ -1,3 +1,6 @@
+// Run Like:
+//root -l beautifier.C\(\"HEMPlots_317344.root\"\)
+
 void beautify(TH2F*&);
 void draw(TH2F*);
 void overlay(TProfile*, TProfile*, string*); 
